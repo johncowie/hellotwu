@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Macintosh-7.local" name="functional.hellotwu.HelloMessageJourneyTest" tests="1" time="9.956" timestamp="2014-03-05T10:24:48">
+  <properties>
+    <property name="java.vendor" value="Apple Inc." />
+    <property name="lib.dir" value="./lib" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="jikes.class.path" value=":/System/Library/Frameworks/JavaVM.framework/Home/../Classes/alt-rt.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/alt-string.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/charsets.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/dt.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/jce.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/jconsole.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/jsse.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/management-agent.jar:/System/Library/Frameworks/JavaVM.framework/Home/../Classes/ui.jar" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar" />
+    <property name="TODAY" value="March 5 2014" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="/Users/jcowie/projects/twu/hellotwu/tools/ant" />
+    <property name="java.runtime.version" value="1.6.0_65-b14-462-11M4609" />
+    <property name="user.name" value="jcowie" />
+    <property name="ant.file.type." value="file" />
+    <property name="awt.nativeDoubleBuffering" value="true" />
+    <property name="absolute.path.base.dir" value="/Users/jcowie/projects/twu/hellotwu" />
+    <property name="user.language" value="en" />
+    <property name="test.report.dir" value="/Users/jcowie/projects/twu/hellotwu/bin/report/test" />
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries" />
+    <property name="ant.project.default-target" value="test-unit" />
+    <property name="ant.project.name" value="" />
+    <property name="DSTAMP" value="20140305" />
+    <property name="java.version" value="1.6.0_65" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="MacRoman" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="50.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home" />
+    <property name="dist.dir" value="./dist" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="/Users/jcowie/projects/twu/hellotwu/build.xml" />
+    <property name="os.version" value="10.9.1" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="20.65-b04-462" />
+    <property name="report.dir" value="/Users/jcowie/projects/twu/hellotwu/bin/report" />
+    <property name="ant.library.dir" value="/Users/jcowie/projects/twu/hellotwu/tools/ant/lib" />
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="apple.awt.CToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="user.home" value="/Users/jcowie" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="java.vendor.url" value="http://www.apple.com/" />
+    <property name="bin.dir" value="./bin" />
+    <property name="java.vm.vendor" value="Apple Inc." />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner functional.hellotwu.HelloMessageJourneyTest filtertrace=true haltOnError=true haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/jcowie/projects/twu/hellotwu/bin/report/test/TEST-functional.hellotwu.HelloMessageJourneyTest.xml crashfile=/Users/jcowie/projects/twu/hellotwu/junitvmwatcher1778325855237590388.properties propsfile=/Users/jcowie/projects/twu/hellotwu/junit2195529495643143875.properties" />
+    <property name="java.class.path" value="/Users/jcowie/projects/twu/hellotwu/lib/test/apache-mime4j-0.6.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/bsh-1.3.0.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/cglib-nodep-2.1_3.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/commons-codec-1.6.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/commons-collections-3.2.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/commons-exec-1.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/commons-io-2.2.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/commons-jxpath-1.3.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/commons-lang3-3.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/commons-logging-1.1.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/cssparser-0.9.9.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/guava-14.0.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/hamcrest-core-1.3.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/hamcrest-library-1.3.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/htmlunit-2.12.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/htmlunit-core-js-2.12.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/httpclient-4.2.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/httpcore-4.2.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/httpmime-4.2.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/ini4j-0.5.2.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/jcommander-1.29.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/jetty-websocket-8.1.8.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/jna-3.4.0.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/jna-platform-3.4.0.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/json-20080701.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/junit-dep-4.11.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/mockito-all-1.9.5.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/nekohtml-1.9.17.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/netty-3.5.7.Final.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/operadriver-1.2.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/phantomjsdriver-1.0.3.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/protobuf-java-2.4.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/sac-1.3.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/selenium-java-2.32.0.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/serializer-2.7.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/spring-test-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/testng-6.8.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/xalan-2.7.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/xercesImpl-2.10.0.jar:/Users/jcowie/projects/twu/hellotwu/lib/test/xml-apis-1.4.01.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/activation-1.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/antlr-2.7.6-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/aopalliance-1.0-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/aspectjweaver-1.7.2.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/com.sun.el-2.2.0.v201108011116.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/commons-collections-3.2.1-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/commons-lang-2.6.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/commons-logging-1.1.1-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/dom4j-1.6.1-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/hamcrest-core-1.3.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/hibernate-annotations-3.5.6-Final-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/hibernate-commons-annotations-3.2.0.Final-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/hibernate-core-3.5.6-Final-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/hibernate-jpa-2.0-api-1.0.1.Final-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/hibernate-validator-4.2.0.Final-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/javassist-3.11.0.GA-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/javax.el-2.2.0.v201108011116.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/javax.servlet.jsp-2.2.0.v201112011158.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/javax.servlet.jsp.jstl-1.2.0.v201105211821.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-continuation-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-http-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-io-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-security-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-server-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-servlet-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-util-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-webapp-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jetty-xml-8.1.9.v20130131.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/jta-1.1-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/log4j-1.2.17.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/mybatis-3.2.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/org.apache.jasper.glassfish-2.2.2.v201112011158.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/org.eclipse.jdt.core-3.7.1.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/persistence-api-1.0-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/postgresql-9.1-901.jdbc4-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/servlet-api-3.0.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/slf4j-api-1.6.2-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/slf4j-log4j12-1.7.5.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-aop-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-beans-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-context-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-context-support-3.1.0.RELEASE-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-core-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-expression-3.1.0.RELEASE-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-jdbc-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-orm-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-tx-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-web-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-webmvc-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/spring-webmvc-portlet-3.2.2.RELEASE.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/testng-6.8.5.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/validation-api-1.0.0.GA-jar.jar:/Users/jcowie/projects/twu/hellotwu/lib/main/xmlunit-1.4.jar:/Users/jcowie/projects/twu/hellotwu/bin/main:/Users/jcowie/projects/twu/hellotwu/bin/test:/Users/jcowie/projects/twu/hellotwu/tools/lib/cobertura/cobertura.jar:/Users/jcowie/projects/twu/hellotwu/tools/lib/cobertura/lib/asm-3.0.jar:/Users/jcowie/projects/twu/hellotwu/tools/lib/cobertura/lib/asm-tree-3.0.jar:/Users/jcowie/projects/twu/hellotwu/tools/lib/cobertura/lib/jakarta-oro-2.0.8.jar:/Users/jcowie/projects/twu/hellotwu/tools/lib/cobertura/lib/log4j-1.2.9.jar:/Users/jcowie/projects/twu/hellotwu/tools/ant/lib/ant-launcher.jar:/Users/jcowie/projects/twu/hellotwu/tools/ant/lib/ant.jar:/Users/jcowie/projects/twu/hellotwu/tools/ant/lib/ant-junit.jar:/Users/jcowie/projects/twu/hellotwu/tools/ant/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
+    <property name="TSTAMP" value="1554" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="base.dir" value="." />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.io.tmpdir" value="/var/folders/v9/n3qh_kmd1jq6ps730p38sy040000gp/T/" />
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/" />
+    <property name="ant.file." value="/Users/jcowie/projects/twu/hellotwu/build.xml" />
+    <property name="mrj.build" value="11M4609" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext" />
+    <property name="user.dir" value="/Users/jcowie/projects/twu/hellotwu" />
+    <property name="mrj.version" value="1070.1.6.0_65-462" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/Users/jcowie/projects/twu/hellotwu" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="/Users/jcowie/projects/twu/hellotwu/tools/ant/lib/ant.jar" />
+    <property name="file.encoding" value="MacRoman" />
+    <property name="BUILD_TIME" value="5-March-2014_03:54" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="src.dir" value="./src" />
+    <property name="ant.project.invoked-targets" value="test-functional" />
+    <property name="cobertura.instrument.dir" value="./bin/instrumented-classes" />
+  </properties>
+  <testcase classname="functional.hellotwu.HelloMessageJourneyTest" name="shouldDisplayHelloTWUMessage" time="9.778" />
+  <system-out><![CDATA[15:54:56,367 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Get connection: {}->http://127.0.0.1:7055, timeout = 120000
+15:54:56,369 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] [{}->http://127.0.0.1:7055] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+15:54:56,369 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] No free connections [{}->http://127.0.0.1:7055][null]
+15:54:56,369 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Available capacity: 2000 out of 2000 [{}->http://127.0.0.1:7055][null]
+15:54:56,369 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Creating new connection [{}->http://127.0.0.1:7055]
+15:54:56,388 DEBUG [org.apache.http.impl.conn.DefaultClientConnectionOperator] Connecting to 127.0.0.1:7055
+15:54:56,422 DEBUG [org.apache.http.client.protocol.RequestAddCookies] CookieSpec selected: best-match
+15:54:56,434 DEBUG [org.apache.http.client.protocol.RequestAuthCache] Auth cache not set in the context
+15:54:56,434 DEBUG [org.apache.http.client.protocol.RequestTargetAuthentication] Target auth state: UNCHALLENGED
+15:54:56,435 DEBUG [org.apache.http.client.protocol.RequestProxyAuthentication] Proxy auth state: UNCHALLENGED
+15:54:56,435 DEBUG [org.apache.http.impl.client.DefaultHttpClient] Attempt 1 to execute request
+15:54:56,435 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Sending request: POST /hub/session HTTP/1.1
+15:54:56,436 DEBUG [org.apache.http.wire] >> "POST /hub/session HTTP/1.1[\r][\n]"
+15:54:56,437 DEBUG [org.apache.http.wire] >> "Accept: application/json, image/png[\r][\n]"
+15:54:56,437 DEBUG [org.apache.http.wire] >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+15:54:56,438 DEBUG [org.apache.http.wire] >> "Content-Length: 105[\r][\n]"
+15:54:56,438 DEBUG [org.apache.http.wire] >> "Host: 127.0.0.1:7055[\r][\n]"
+15:54:56,438 DEBUG [org.apache.http.wire] >> "Connection: Keep-Alive[\r][\n]"
+15:54:56,438 DEBUG [org.apache.http.wire] >> "[\r][\n]"
+15:54:56,438 DEBUG [org.apache.http.headers] >> POST /hub/session HTTP/1.1
+15:54:56,438 DEBUG [org.apache.http.headers] >> Accept: application/json, image/png
+15:54:56,438 DEBUG [org.apache.http.headers] >> Content-Type: application/json; charset=utf-8
+15:54:56,438 DEBUG [org.apache.http.headers] >> Content-Length: 105
+15:54:56,438 DEBUG [org.apache.http.headers] >> Host: 127.0.0.1:7055
+15:54:56,438 DEBUG [org.apache.http.headers] >> Connection: Keep-Alive
+15:54:56,438 DEBUG [org.apache.http.wire] >> "{"desiredCapabilities":{"platform":"ANY","browserName":"firefox","version":""},"requiredCapabilities":{}}"
+15:54:57,710 DEBUG [org.apache.http.wire] << "HTTP/1.1 303 See Other[\r][\n]"
+15:54:57,713 DEBUG [org.apache.http.wire] << "location: http://127.0.0.1:7055/hub/session/540077f6-cee7-074a-970d-24af226b1311[\r][\n]"
+15:54:57,713 DEBUG [org.apache.http.wire] << "connection: close[\r][\n]"
+15:54:57,713 DEBUG [org.apache.http.wire] << "content-length: 0[\r][\n]"
+15:54:57,713 DEBUG [org.apache.http.wire] << "server: httpd.js[\r][\n]"
+15:54:57,713 DEBUG [org.apache.http.wire] << "date: Wed, 05 Mar 2014 10:24:57 GMT[\r][\n]"
+15:54:57,713 DEBUG [org.apache.http.wire] << "[\r][\n]"
+15:54:57,714 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Receiving response: HTTP/1.1 303 See Other
+15:54:57,714 DEBUG [org.apache.http.headers] << HTTP/1.1 303 See Other
+15:54:57,714 DEBUG [org.apache.http.headers] << location: http://127.0.0.1:7055/hub/session/540077f6-cee7-074a-970d-24af226b1311
+15:54:57,714 DEBUG [org.apache.http.headers] << connection: close
+15:54:57,714 DEBUG [org.apache.http.headers] << content-length: 0
+15:54:57,714 DEBUG [org.apache.http.headers] << server: httpd.js
+15:54:57,714 DEBUG [org.apache.http.headers] << date: Wed, 05 Mar 2014 10:24:57 GMT
+15:54:57,716 DEBUG [org.apache.http.impl.client.DefaultRedirectStrategy] Redirect requested to location 'http://127.0.0.1:7055/hub/session/540077f6-cee7-074a-970d-24af226b1311'
+15:54:57,717 DEBUG [org.apache.http.impl.client.DefaultHttpClient] Redirecting to 'http://127.0.0.1:7055/hub/session/540077f6-cee7-074a-970d-24af226b1311' via {}->http://127.0.0.1:7055
+15:54:57,718 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57294<->127.0.0.1:7055 closed
+15:54:57,718 DEBUG [org.apache.http.impl.conn.DefaultClientConnectionOperator] Connecting to 127.0.0.1:7055
+15:54:57,718 DEBUG [org.apache.http.client.protocol.RequestAddCookies] CookieSpec selected: best-match
+15:54:57,719 DEBUG [org.apache.http.client.protocol.RequestAuthCache] Auth cache not set in the context
+15:54:57,719 DEBUG [org.apache.http.client.protocol.RequestTargetAuthentication] Target auth state: UNCHALLENGED
+15:54:57,719 DEBUG [org.apache.http.client.protocol.RequestProxyAuthentication] Proxy auth state: UNCHALLENGED
+15:54:57,719 DEBUG [org.apache.http.impl.client.DefaultHttpClient] Attempt 2 to execute request
+15:54:57,719 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Sending request: GET /hub/session/540077f6-cee7-074a-970d-24af226b1311 HTTP/1.1
+15:54:57,719 DEBUG [org.apache.http.wire] >> "GET /hub/session/540077f6-cee7-074a-970d-24af226b1311 HTTP/1.1[\r][\n]"
+15:54:57,719 DEBUG [org.apache.http.wire] >> "Accept: application/json, image/png[\r][\n]"
+15:54:57,719 DEBUG [org.apache.http.wire] >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+15:54:57,719 DEBUG [org.apache.http.wire] >> "Host: 127.0.0.1:7055[\r][\n]"
+15:54:57,719 DEBUG [org.apache.http.wire] >> "Connection: Keep-Alive[\r][\n]"
+15:54:57,719 DEBUG [org.apache.http.wire] >> "[\r][\n]"
+15:54:57,719 DEBUG [org.apache.http.headers] >> GET /hub/session/540077f6-cee7-074a-970d-24af226b1311 HTTP/1.1
+15:54:57,719 DEBUG [org.apache.http.headers] >> Accept: application/json, image/png
+15:54:57,719 DEBUG [org.apache.http.headers] >> Content-Type: application/json; charset=utf-8
+15:54:57,719 DEBUG [org.apache.http.headers] >> Host: 127.0.0.1:7055
+15:54:57,720 DEBUG [org.apache.http.headers] >> Connection: Keep-Alive
+15:54:57,723 DEBUG [org.apache.http.wire] << "HTTP/1.1 200 OK[\r][\n]"
+15:54:57,723 DEBUG [org.apache.http.wire] << "content-type: application/json; charset=UTF-8[\r][\n]"
+15:54:57,723 DEBUG [org.apache.http.wire] << "connection: close[\r][\n]"
+15:54:57,723 DEBUG [org.apache.http.wire] << "content-length: 466[\r][\n]"
+15:54:57,723 DEBUG [org.apache.http.wire] << "server: httpd.js[\r][\n]"
+15:54:57,723 DEBUG [org.apache.http.wire] << "date: Wed, 05 Mar 2014 10:24:57 GMT[\r][\n]"
+15:54:57,723 DEBUG [org.apache.http.wire] << "[\r][\n]"
+15:54:57,723 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:54:57,723 DEBUG [org.apache.http.headers] << HTTP/1.1 200 OK
+15:54:57,723 DEBUG [org.apache.http.headers] << content-type: application/json; charset=UTF-8
+15:54:57,723 DEBUG [org.apache.http.headers] << connection: close
+15:54:57,723 DEBUG [org.apache.http.headers] << content-length: 466
+15:54:57,723 DEBUG [org.apache.http.headers] << server: httpd.js
+15:54:57,724 DEBUG [org.apache.http.headers] << date: Wed, 05 Mar 2014 10:24:57 GMT
+15:54:57,728 DEBUG [org.apache.http.wire] << "{"name":"getSessionCapabilities","sessionId":"540077f6-cee7-074a-970d-24af226b1311","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":false,"platform":"Darwin","rotatable":false,"takesScreenshot":true,"version":"24.3.0","webStorageEnabled":true,"applicationCacheEnabled":true,"databaseEnabled":true,"locationContextEnabled":true,"browserConnectionEnabled":true,"acceptSslCerts":true}}"
+15:54:57,728 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57295<->127.0.0.1:7055 shut down
+15:54:57,728 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Released connection is not reusable.
+15:54:57,728 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Releasing connection [{}->http://127.0.0.1:7055][null]
+15:54:57,728 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57295<->127.0.0.1:7055 closed
+15:54:57,728 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Notifying no-one, there are no waiting threads
+15:54:57,741 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Get connection: {}->http://127.0.0.1:7055, timeout = 120000
+15:54:57,741 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] [{}->http://127.0.0.1:7055] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+15:54:57,741 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] No free connections [{}->http://127.0.0.1:7055][null]
+15:54:57,741 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Available capacity: 2000 out of 2000 [{}->http://127.0.0.1:7055][null]
+15:54:57,741 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Creating new connection [{}->http://127.0.0.1:7055]
+15:54:57,741 DEBUG [org.apache.http.impl.conn.DefaultClientConnectionOperator] Connecting to 127.0.0.1:7055
+15:54:57,742 DEBUG [org.apache.http.client.protocol.RequestAddCookies] CookieSpec selected: best-match
+15:54:57,742 DEBUG [org.apache.http.client.protocol.RequestAuthCache] Auth cache not set in the context
+15:54:57,742 DEBUG [org.apache.http.client.protocol.RequestTargetAuthentication] Target auth state: UNCHALLENGED
+15:54:57,742 DEBUG [org.apache.http.client.protocol.RequestProxyAuthentication] Proxy auth state: UNCHALLENGED
+15:54:57,742 DEBUG [org.apache.http.impl.client.DefaultHttpClient] Attempt 1 to execute request
+15:54:57,742 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Sending request: POST /hub/session/540077f6-cee7-074a-970d-24af226b1311/url HTTP/1.1
+15:54:57,742 DEBUG [org.apache.http.wire] >> "POST /hub/session/540077f6-cee7-074a-970d-24af226b1311/url HTTP/1.1[\r][\n]"
+15:54:57,742 DEBUG [org.apache.http.wire] >> "Accept: application/json, image/png[\r][\n]"
+15:54:57,742 DEBUG [org.apache.http.wire] >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+15:54:57,742 DEBUG [org.apache.http.wire] >> "Content-Length: 32[\r][\n]"
+15:54:57,742 DEBUG [org.apache.http.wire] >> "Host: 127.0.0.1:7055[\r][\n]"
+15:54:57,742 DEBUG [org.apache.http.wire] >> "Connection: Keep-Alive[\r][\n]"
+15:54:57,742 DEBUG [org.apache.http.wire] >> "[\r][\n]"
+15:54:57,743 DEBUG [org.apache.http.headers] >> POST /hub/session/540077f6-cee7-074a-970d-24af226b1311/url HTTP/1.1
+15:54:57,743 DEBUG [org.apache.http.headers] >> Accept: application/json, image/png
+15:54:57,743 DEBUG [org.apache.http.headers] >> Content-Type: application/json; charset=utf-8
+15:54:57,743 DEBUG [org.apache.http.headers] >> Content-Length: 32
+15:54:57,743 DEBUG [org.apache.http.headers] >> Host: 127.0.0.1:7055
+15:54:57,743 DEBUG [org.apache.http.headers] >> Connection: Keep-Alive
+15:54:57,743 DEBUG [org.apache.http.wire] >> "{"url":"http://localhost:8080/"}"
+15:54:58,041 DEBUG [org.apache.http.wire] << "HTTP/1.1 200 OK[\r][\n]"
+15:54:58,041 DEBUG [org.apache.http.wire] << "content-type: application/json; charset=UTF-8[\r][\n]"
+15:54:58,041 DEBUG [org.apache.http.wire] << "connection: close[\r][\n]"
+15:54:58,041 DEBUG [org.apache.http.wire] << "content-length: 87[\r][\n]"
+15:54:58,041 DEBUG [org.apache.http.wire] << "server: httpd.js[\r][\n]"
+15:54:58,041 DEBUG [org.apache.http.wire] << "date: Wed, 05 Mar 2014 10:24:57 GMT[\r][\n]"
+15:54:58,041 DEBUG [org.apache.http.wire] << "[\r][\n]"
+15:54:58,041 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:54:58,041 DEBUG [org.apache.http.headers] << HTTP/1.1 200 OK
+15:54:58,041 DEBUG [org.apache.http.headers] << content-type: application/json; charset=UTF-8
+15:54:58,042 DEBUG [org.apache.http.headers] << connection: close
+15:54:58,042 DEBUG [org.apache.http.headers] << content-length: 87
+15:54:58,042 DEBUG [org.apache.http.headers] << server: httpd.js
+15:54:58,042 DEBUG [org.apache.http.headers] << date: Wed, 05 Mar 2014 10:24:57 GMT
+15:54:58,042 DEBUG [org.apache.http.wire] << "{"name":"get","sessionId":"540077f6-cee7-074a-970d-24af226b1311","status":0,"value":""}"
+15:54:58,042 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57296<->127.0.0.1:7055 shut down
+15:54:58,042 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Released connection is not reusable.
+15:54:58,042 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Releasing connection [{}->http://127.0.0.1:7055][null]
+15:54:58,042 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57296<->127.0.0.1:7055 closed
+15:54:58,042 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Notifying no-one, there are no waiting threads
+15:54:58,047 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Get connection: {}->http://127.0.0.1:7055, timeout = 120000
+15:54:58,047 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] [{}->http://127.0.0.1:7055] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+15:54:58,047 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] No free connections [{}->http://127.0.0.1:7055][null]
+15:54:58,047 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Available capacity: 2000 out of 2000 [{}->http://127.0.0.1:7055][null]
+15:54:58,047 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Creating new connection [{}->http://127.0.0.1:7055]
+15:54:58,047 DEBUG [org.apache.http.impl.conn.DefaultClientConnectionOperator] Connecting to 127.0.0.1:7055
+15:54:58,047 DEBUG [org.apache.http.client.protocol.RequestAddCookies] CookieSpec selected: best-match
+15:54:58,048 DEBUG [org.apache.http.client.protocol.RequestAuthCache] Auth cache not set in the context
+15:54:58,048 DEBUG [org.apache.http.client.protocol.RequestTargetAuthentication] Target auth state: UNCHALLENGED
+15:54:58,048 DEBUG [org.apache.http.client.protocol.RequestProxyAuthentication] Proxy auth state: UNCHALLENGED
+15:54:58,048 DEBUG [org.apache.http.impl.client.DefaultHttpClient] Attempt 1 to execute request
+15:54:58,048 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Sending request: POST /hub/session/540077f6-cee7-074a-970d-24af226b1311/element HTTP/1.1
+15:54:58,048 DEBUG [org.apache.http.wire] >> "POST /hub/session/540077f6-cee7-074a-970d-24af226b1311/element HTTP/1.1[\r][\n]"
+15:54:58,048 DEBUG [org.apache.http.wire] >> "Accept: application/json, image/png[\r][\n]"
+15:54:58,048 DEBUG [org.apache.http.wire] >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+15:54:58,048 DEBUG [org.apache.http.wire] >> "Content-Length: 33[\r][\n]"
+15:54:58,048 DEBUG [org.apache.http.wire] >> "Host: 127.0.0.1:7055[\r][\n]"
+15:54:58,048 DEBUG [org.apache.http.wire] >> "Connection: Keep-Alive[\r][\n]"
+15:54:58,048 DEBUG [org.apache.http.wire] >> "[\r][\n]"
+15:54:58,048 DEBUG [org.apache.http.headers] >> POST /hub/session/540077f6-cee7-074a-970d-24af226b1311/element HTTP/1.1
+15:54:58,048 DEBUG [org.apache.http.headers] >> Accept: application/json, image/png
+15:54:58,048 DEBUG [org.apache.http.headers] >> Content-Type: application/json; charset=utf-8
+15:54:58,048 DEBUG [org.apache.http.headers] >> Content-Length: 33
+15:54:58,048 DEBUG [org.apache.http.headers] >> Host: 127.0.0.1:7055
+15:54:58,048 DEBUG [org.apache.http.headers] >> Connection: Keep-Alive
+15:54:58,048 DEBUG [org.apache.http.wire] >> "{"using":"tag name","value":"h1"}"
+15:54:58,129 DEBUG [org.apache.http.wire] << "HTTP/1.1 200 OK[\r][\n]"
+15:54:58,129 DEBUG [org.apache.http.wire] << "content-type: application/json; charset=UTF-8[\r][\n]"
+15:54:58,129 DEBUG [org.apache.http.wire] << "connection: close[\r][\n]"
+15:54:58,129 DEBUG [org.apache.http.wire] << "content-length: 145[\r][\n]"
+15:54:58,129 DEBUG [org.apache.http.wire] << "server: httpd.js[\r][\n]"
+15:54:58,129 DEBUG [org.apache.http.wire] << "date: Wed, 05 Mar 2014 10:24:58 GMT[\r][\n]"
+15:54:58,129 DEBUG [org.apache.http.wire] << "[\r][\n]"
+15:54:58,129 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:54:58,129 DEBUG [org.apache.http.headers] << HTTP/1.1 200 OK
+15:54:58,129 DEBUG [org.apache.http.headers] << content-type: application/json; charset=UTF-8
+15:54:58,129 DEBUG [org.apache.http.headers] << connection: close
+15:54:58,129 DEBUG [org.apache.http.headers] << content-length: 145
+15:54:58,129 DEBUG [org.apache.http.headers] << server: httpd.js
+15:54:58,129 DEBUG [org.apache.http.headers] << date: Wed, 05 Mar 2014 10:24:58 GMT
+15:54:58,129 DEBUG [org.apache.http.wire] << "{"name":"findElement","sessionId":"540077f6-cee7-074a-970d-24af226b1311","status":0,"value":{"ELEMENT":"{a4c5cc3d-de4a-1144-a96c-1d6c4e69fae4}"}}"
+15:54:58,129 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57299<->127.0.0.1:7055 shut down
+15:54:58,129 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Released connection is not reusable.
+15:54:58,129 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Releasing connection [{}->http://127.0.0.1:7055][null]
+15:54:58,130 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57299<->127.0.0.1:7055 closed
+15:54:58,130 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Notifying no-one, there are no waiting threads
+15:54:58,137 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Get connection: {}->http://127.0.0.1:7055, timeout = 120000
+15:54:58,137 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] [{}->http://127.0.0.1:7055] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+15:54:58,137 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] No free connections [{}->http://127.0.0.1:7055][null]
+15:54:58,137 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Available capacity: 2000 out of 2000 [{}->http://127.0.0.1:7055][null]
+15:54:58,137 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Creating new connection [{}->http://127.0.0.1:7055]
+15:54:58,137 DEBUG [org.apache.http.impl.conn.DefaultClientConnectionOperator] Connecting to 127.0.0.1:7055
+15:54:58,139 DEBUG [org.apache.http.client.protocol.RequestAddCookies] CookieSpec selected: best-match
+15:54:58,139 DEBUG [org.apache.http.client.protocol.RequestAuthCache] Auth cache not set in the context
+15:54:58,139 DEBUG [org.apache.http.client.protocol.RequestTargetAuthentication] Target auth state: UNCHALLENGED
+15:54:58,139 DEBUG [org.apache.http.client.protocol.RequestProxyAuthentication] Proxy auth state: UNCHALLENGED
+15:54:58,139 DEBUG [org.apache.http.impl.client.DefaultHttpClient] Attempt 1 to execute request
+15:54:58,139 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Sending request: GET /hub/session/540077f6-cee7-074a-970d-24af226b1311/element/%7Ba4c5cc3d-de4a-1144-a96c-1d6c4e69fae4%7D/text HTTP/1.1
+15:54:58,139 DEBUG [org.apache.http.wire] >> "GET /hub/session/540077f6-cee7-074a-970d-24af226b1311/element/%7Ba4c5cc3d-de4a-1144-a96c-1d6c4e69fae4%7D/text HTTP/1.1[\r][\n]"
+15:54:58,139 DEBUG [org.apache.http.wire] >> "Accept: application/json, image/png[\r][\n]"
+15:54:58,139 DEBUG [org.apache.http.wire] >> "Cache-Control: no-cache[\r][\n]"
+15:54:58,139 DEBUG [org.apache.http.wire] >> "Host: 127.0.0.1:7055[\r][\n]"
+15:54:58,139 DEBUG [org.apache.http.wire] >> "Connection: Keep-Alive[\r][\n]"
+15:54:58,139 DEBUG [org.apache.http.wire] >> "[\r][\n]"
+15:54:58,139 DEBUG [org.apache.http.headers] >> GET /hub/session/540077f6-cee7-074a-970d-24af226b1311/element/%7Ba4c5cc3d-de4a-1144-a96c-1d6c4e69fae4%7D/text HTTP/1.1
+15:54:58,140 DEBUG [org.apache.http.headers] >> Accept: application/json, image/png
+15:54:58,140 DEBUG [org.apache.http.headers] >> Cache-Control: no-cache
+15:54:58,140 DEBUG [org.apache.http.headers] >> Host: 127.0.0.1:7055
+15:54:58,140 DEBUG [org.apache.http.headers] >> Connection: Keep-Alive
+15:54:58,146 DEBUG [org.apache.http.wire] << "HTTP/1.1 200 OK[\r][\n]"
+15:54:58,147 DEBUG [org.apache.http.wire] << "content-type: application/json; charset=UTF-8[\r][\n]"
+15:54:58,147 DEBUG [org.apache.http.wire] << "connection: close[\r][\n]"
+15:54:58,147 DEBUG [org.apache.http.wire] << "content-length: 109[\r][\n]"
+15:54:58,147 DEBUG [org.apache.http.wire] << "server: httpd.js[\r][\n]"
+15:54:58,147 DEBUG [org.apache.http.wire] << "date: Wed, 05 Mar 2014 10:24:58 GMT[\r][\n]"
+15:54:58,147 DEBUG [org.apache.http.wire] << "[\r][\n]"
+15:54:58,147 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:54:58,147 DEBUG [org.apache.http.headers] << HTTP/1.1 200 OK
+15:54:58,147 DEBUG [org.apache.http.headers] << content-type: application/json; charset=UTF-8
+15:54:58,147 DEBUG [org.apache.http.headers] << connection: close
+15:54:58,147 DEBUG [org.apache.http.headers] << content-length: 109
+15:54:58,147 DEBUG [org.apache.http.headers] << server: httpd.js
+15:54:58,147 DEBUG [org.apache.http.headers] << date: Wed, 05 Mar 2014 10:24:58 GMT
+15:54:58,148 DEBUG [org.apache.http.wire] << "{"name":"getElementText","sessionId":"540077f6-cee7-074a-970d-24af226b1311","status":0,"value":"Hello TWU!!"}"
+15:54:58,148 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57300<->127.0.0.1:7055 shut down
+15:54:58,148 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Released connection is not reusable.
+15:54:58,148 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Releasing connection [{}->http://127.0.0.1:7055][null]
+15:54:58,148 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57300<->127.0.0.1:7055 closed
+15:54:58,148 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Notifying no-one, there are no waiting threads
+15:54:58,153 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Get connection: {}->http://127.0.0.1:7055, timeout = 120000
+15:54:58,153 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] [{}->http://127.0.0.1:7055] total kept alive: 0, total issued: 0, total allocated: 0 out of 2000
+15:54:58,153 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] No free connections [{}->http://127.0.0.1:7055][null]
+15:54:58,153 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Available capacity: 2000 out of 2000 [{}->http://127.0.0.1:7055][null]
+15:54:58,153 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Creating new connection [{}->http://127.0.0.1:7055]
+15:54:58,154 DEBUG [org.apache.http.impl.conn.DefaultClientConnectionOperator] Connecting to 127.0.0.1:7055
+15:54:58,154 DEBUG [org.apache.http.client.protocol.RequestAddCookies] CookieSpec selected: best-match
+15:54:58,154 DEBUG [org.apache.http.client.protocol.RequestAuthCache] Auth cache not set in the context
+15:54:58,154 DEBUG [org.apache.http.client.protocol.RequestTargetAuthentication] Target auth state: UNCHALLENGED
+15:54:58,154 DEBUG [org.apache.http.client.protocol.RequestProxyAuthentication] Proxy auth state: UNCHALLENGED
+15:54:58,154 DEBUG [org.apache.http.impl.client.DefaultHttpClient] Attempt 1 to execute request
+15:54:58,154 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Sending request: DELETE /hub/session/540077f6-cee7-074a-970d-24af226b1311 HTTP/1.1
+15:54:58,154 DEBUG [org.apache.http.wire] >> "DELETE /hub/session/540077f6-cee7-074a-970d-24af226b1311 HTTP/1.1[\r][\n]"
+15:54:58,154 DEBUG [org.apache.http.wire] >> "Accept: application/json, image/png[\r][\n]"
+15:54:58,154 DEBUG [org.apache.http.wire] >> "Host: 127.0.0.1:7055[\r][\n]"
+15:54:58,155 DEBUG [org.apache.http.wire] >> "Connection: Keep-Alive[\r][\n]"
+15:54:58,155 DEBUG [org.apache.http.wire] >> "[\r][\n]"
+15:54:58,155 DEBUG [org.apache.http.headers] >> DELETE /hub/session/540077f6-cee7-074a-970d-24af226b1311 HTTP/1.1
+15:54:58,155 DEBUG [org.apache.http.headers] >> Accept: application/json, image/png
+15:54:58,155 DEBUG [org.apache.http.headers] >> Host: 127.0.0.1:7055
+15:54:58,155 DEBUG [org.apache.http.headers] >> Connection: Keep-Alive
+15:54:58,157 DEBUG [org.apache.http.wire] << "HTTP/1.1 200 OK[\r][\n]"
+15:54:58,157 DEBUG [org.apache.http.wire] << "content-type: application/json; charset=UTF-8[\r][\n]"
+15:54:58,157 DEBUG [org.apache.http.wire] << "connection: close[\r][\n]"
+15:54:58,157 DEBUG [org.apache.http.wire] << "content-length: 88[\r][\n]"
+15:54:58,157 DEBUG [org.apache.http.wire] << "server: httpd.js[\r][\n]"
+15:54:58,157 DEBUG [org.apache.http.wire] << "date: Wed, 05 Mar 2014 10:24:58 GMT[\r][\n]"
+15:54:58,157 DEBUG [org.apache.http.wire] << "[\r][\n]"
+15:54:58,157 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:54:58,157 DEBUG [org.apache.http.headers] << HTTP/1.1 200 OK
+15:54:58,157 DEBUG [org.apache.http.headers] << content-type: application/json; charset=UTF-8
+15:54:58,157 DEBUG [org.apache.http.headers] << connection: close
+15:54:58,157 DEBUG [org.apache.http.headers] << content-length: 88
+15:54:58,157 DEBUG [org.apache.http.headers] << server: httpd.js
+15:54:58,157 DEBUG [org.apache.http.headers] << date: Wed, 05 Mar 2014 10:24:58 GMT
+15:54:58,158 DEBUG [org.apache.http.wire] << "{"name":"quit","sessionId":"540077f6-cee7-074a-970d-24af226b1311","status":0,"value":""}"
+15:54:58,158 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57301<->127.0.0.1:7055 shut down
+15:54:58,158 DEBUG [org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager] Released connection is not reusable.
+15:54:58,158 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Releasing connection [{}->http://127.0.0.1:7055][null]
+15:54:58,158 DEBUG [org.apache.http.impl.conn.DefaultClientConnection] Connection 0.0.0.0:57301<->127.0.0.1:7055 closed
+15:54:58,158 DEBUG [org.apache.http.impl.conn.tsccm.ConnPoolByRoute] Notifying no-one, there are no waiting threads
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="" default="test-unit">
+
+    <property name="base.dir" value="."/>
+    <property name="absolute.path.base.dir" location="${base.dir}"/>
+    <property name="bin.dir" value="${base.dir}/bin"/>
+    <property name="src.dir" value="${base.dir}/src"/>
+    <property name="lib.dir" value="${base.dir}/lib"/>
+    <property name="dist.dir" value="${base.dir}/dist"/>
+    <property name="cobertura.instrument.dir" value="${bin.dir}/instrumented-classes"/>
+    <property name="report.dir" location="${bin.dir}/report"/>
+    <property name="test.report.dir" location="${report.dir}/test"/>
+
+    <path id="classpath.tests">
+        <fileset dir="${lib.dir}/test"/>
+        <fileset dir="${lib.dir}/main"/>
+        <pathelement location="${bin.dir}/main"/>
+        <pathelement location="${bin.dir}/test"/>
+        <path refid="cobertura.classpath"/>
+    </path>
+
+    <fileset id="classpath.for.unit.test" dir="./bin/test">
+        <include name="**/*Test.class"/>
+    </fileset>
+
+    <fileset id="classpath.for.functional.test" dir="./bin/test">
+        <include name="functional/**/*Test.class"/>
+    </fileset>
+
+    <tstamp>
+        <format property="BUILD_TIME" pattern="d-MMMM-yyyy_hh:mm"/>
+    </tstamp>
+
+    <path id="cobertura.classpath">
+        <fileset dir="tools/lib/cobertura">
+            <include name="cobertura.jar"/>
+            <include name="lib/**/*.jar"/>
+        </fileset>
+    </path>
+
+    <taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+
+    <target name="cobertura-instrument">
+        <cobertura-instrument todir="${cobertura.instrument.dir}">
+            <fileset dir="${bin.dir}/main">
+                <include name="**/*.class"/>
+            </fileset>
+        </cobertura-instrument>
+    </target>
+
+    <target name="compile-main" depends="create-bin" description="compile main classes">
+        <javac source="1.6" target="1.6" debug="true" debuglevel="lines,vars,source"
+               encoding="iso-8859-1" deprecation="true" includeAntRuntime="false"
+               failonerror="true" srcdir="${src.dir}/main" destdir="${bin.dir}/main">
+            <include name="**/**"/>
+            <classpath>
+                <fileset dir="${lib.dir}/main"/>
+            </classpath>
+        </javac>
+        <copy todir="${bin.dir}/main" overwrite="true">
+            <fileset dir="${src.dir}/main/resources">
+                <include name="**/*.xml"/>
+                <include name="**/*.properties"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile-test" depends="compile-main" description="compile test classes">
+        <javac source="1.6" target="1.6" debug="true" debuglevel="lines,vars,source"
+               encoding="iso-8859-1" deprecation="true" includeAntRuntime="false"
+               failonerror="true" srcdir="${src.dir}/test/java" destdir="${bin.dir}/test">
+            <include name="**/**"/>
+            <classpath>
+                <path refid="classpath.tests"/>
+            </classpath>
+        </javac>
+        <!--<copy todir="${bin.dir}/test" overwrite="true">-->
+            <!--<fileset dir="${src.dir}/test/resources">-->
+                <!--<include name="**/*.xml"/>-->
+            <!--</fileset>-->
+        <!--</copy>-->
+    </target>
+
+    <macrodef name="common-test-runner">
+        <attribute name="test-dir"/>
+        <attribute name="classpath"/>
+        <sequential>
+            <mkdir dir="${test.report.dir}"/>
+            <junit fork="yes" forkmode="once" failureproperty="unit.tests.failed" printsummary="yes"
+                   haltonfailure="true" haltonerror="true" showoutput="true">
+                <classpath location="${cobertura.instrument.dir}"/>
+                <classpath>
+                    <path refid="@{classpath}"/>
+                </classpath>
+
+                <formatter type="plain" usefile="false"/>
+                <formatter type="xml" usefile="true"/>
+                <batchtest todir="${test.report.dir}">
+                    <fileset refid="@{test-dir}"></fileset>
+                </batchtest>
+            </junit>
+        </sequential>
+    </macrodef>
+
+    <target name="test-unit-without-report" depends="compile-test, cobertura-instrument"
+            description="run all unit tests without report">
+        <common-test-runner test-dir="classpath.for.unit.test" classpath="classpath.tests"/>
+    </target>
+
+    <target name="test-unit"
+            depends="test-unit-without-report, report-tests, check-failed-tests, coverage"
+            description="Run unit tests, report under bin directory"/>
+
+    <target name="report-tests" if="unit.tests.failed">
+        <echo message="Start to generate a report ..."/>
+        <junitreport todir="${test.report.dir}">
+            <fileset dir="${test.report.dir}" includes="TEST-*.xml"/>
+            <report todir="${test.report.dir}/html"/>
+        </junitreport>
+    </target>
+
+    <target name="check-failed-tests" if="unit.tests.failed">
+        <fail message="One or more tests failed. Please check the logs for more info under bin directory"/>
+    </target>
+
+    <target name="init-db" depends="stop">
+        <exec executable="db/create.sh"/>
+    </target>
+
+    <target name="test-functional-without-report" depends="compile-test"
+            description="run all functional tests without report">
+        <exec executable="./scripts/start-server.sh"/>
+        <!--<sleep seconds="10"/>-->
+        <common-test-runner test-dir="classpath.for.functional.test" classpath="classpath.tests"/>
+        <exec executable="./scripts/stop-server.sh"/>
+    </target>
+
+    <target name="test-functional"
+            depends="test-functional-without-report, report-tests, check-failed-tests"
+            description="Run functional tests, report under bin directory"/>
+
+
+    <target name="create-bin" depends="clean-bin">
+        <mkdir dir="${bin.dir}/main"/>
+        <mkdir dir="${bin.dir}/test"/>
+    </target>
+
+    <target name="clean-bin">
+        <delete dir="${bin.dir}"/>
+    </target>
+
+    <target name="clean" depends="clean-bin" description="clean up project directory">
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="start" depends="compile-main" description="start jetty server">
+        <exec executable="./scripts/start-server.sh"/>
+    </target>
+
+    <target name="stop" description="stop jetty server">
+        <exec executable="./scripts/stop-server.sh"/>
+    </target>
+
+    <target name="restart" depends="stop,start" description="restarts jetty server"/>
+
+    <target name="jar-main" depends="test-unit">
+        <jar jarfile="${dist.dir}/hellotwu.jar" basedir="${bin.dir}/main" update="true">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Built-Date" value="${BUILD_TIME}"/>
+                <attribute name="main-class" value="hellotwu.web.HelloServer"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="jar-test" depends="compile-test">
+        <jar jarfile="${dist.dir}/hellotwu-test.jar" basedir="${bin.dir}/test" update="true">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Built-Date" value="${BUILD_TIME}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="package-main" depends="jar-main">
+        <zip destfile="${dist.dir}/hellotwu.zip">
+            <zipfileset dir="${src.dir}/main/webapp" prefix="src/main/webapp"/>
+            <zipfileset dir="${lib.dir}/main" prefix="lib/main"/>
+            <zipfileset dir="${dist.dir}" includes="hellotwu.jar" fullpath="lib/main/hellotwu.jar"/>
+            <zipfileset dir="scripts" includes="*.sh"/>
+            <zipfileset dir="db" prefix="db"/>
+        </zip>
+    </target>
+
+    <target name="package-test" depends="jar-test">
+        <zip destfile="${dist.dir}/hellotwu-test.zip">
+            <zipfileset dir="${lib.dir}/test" prefix="lib-tests"/>
+            <zipfileset dir="${dist.dir}" includes="hellotwu-test.jar" fullpath="hellotwu-test.jar"/>
+        </zip>
+    </target>
+
+    <target name="package" depends="package-test, package-main" description="Create a packages for app and tests."/>
+
+    <target name="test" depends="test-unit, test-functional" description="run all tests"/>
+
+    <target name="compile" depends="compile-main, compile-test" description="compile all sources"/>
+
+    <target name="coverage" description="generates html coverage reports">
+        <cobertura-report srcdir="${src.dir}" destdir="${bin.dir}/coverage/" format="xml"/>
+        <echo message="Coverage report generated in: ${absolute.path.base.dir}/bin/coverage/index.html"/>
+    </target>
+</project>
