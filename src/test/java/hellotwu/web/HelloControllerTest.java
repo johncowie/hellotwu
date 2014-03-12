@@ -1,23 +1,20 @@
 package hellotwu.web;
 
 import hellotwu.service.HelloService;
-import junit.framework.TestCase;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.ui.ModelMap;
-
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.initMocks;
 
-@RunWith(MockitoJUnitRunner.class)
-public class HelloControllerTest extends TestCase {
-
+public class HelloControllerTest {
     @Mock
     private HelloService helloService;
 
     @Test
     public void shouldGetMessageFromHelloService() {
+        initMocks(this);
         final HelloController helloController = new HelloController(helloService);
         ModelMap modelMap = new ModelMap();
 
