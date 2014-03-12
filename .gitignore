@@ -4,3 +4,4 @@ target**
 *.iml
 bin
 cobertura.ser
+out
