@@ -5,6 +5,8 @@ App for testing that TWU stack is correctly configured.
 
 At this point you should have postgres, svn, firefox (version 24 or below) and java installed.
 
+Get a copy of the app code by clicking the 'Download ZIP' button on the righthand side of the github page.
+
 You need a postgres database named 'trailblazers' and a postgres superuser named 'postgres'.
 
 To create the postgres user run ```createuser -s postgres``` in a terminal.
