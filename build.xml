@@ -21,6 +21,7 @@
 
     <fileset id="classpath.for.unit.test" dir="./bin/test">
         <include name="**/*Test.class"/>
+        <exclude name="functional/**/*Test.class"/>
     </fileset>
 
     <fileset id="classpath.for.functional.test" dir="./bin/test">
