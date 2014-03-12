@@ -1,6 +1,7 @@
 package hellotwu.web;
 
 import hellotwu.service.HelloService;
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.springframework.ui.ModelMap;
@@ -12,9 +13,13 @@ public class HelloControllerTest {
     @Mock
     private HelloService helloService;
 
+    @Before
+    public void setUp() throws Exception {
+        initMocks(this);
+    }
+
     @Test
     public void shouldGetMessageFromHelloService() {
-        initMocks(this);
         final HelloController helloController = new HelloController(helloService);
         ModelMap modelMap = new ModelMap();
 
