@@ -7,6 +7,7 @@ At this point you should have:
 * java - preinstalled in MacOSX
 * svn - preinstalled in MacOSX
 * postgres - http://postgresapp.com/
+* have the following in your .bashrc file: ```export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"```
 * firefox - https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/24.0/mac/en-US/Firefox%2024.0.dmg (version 24 or below, and make sure to disable auto-upgrade in preferences)
 
 Get a copy of the app code by clicking the 'Download ZIP' button on the righthand side of the github page.
